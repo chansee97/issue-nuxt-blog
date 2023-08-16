@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-  modules: [],
+  modules: [
+  ],
   app: {
     head: {
       meta: [
@@ -19,19 +20,6 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: 'font-sans',
       },
-    },
-  },
-  content: {
-    highlight: {
-      theme: {
-        // Default theme (same as single string)
-        default: 'vitesse-light',
-        // Theme used if `html.dark`
-        dark: 'vitesse-dark',
-        // Theme used if `html.sepia`
-        sepia: 'monokai',
-      },
-      preload: ['c', 'cpp', 'java'],
     },
   },
 })

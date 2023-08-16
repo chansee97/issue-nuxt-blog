@@ -3,10 +3,12 @@
 // definePageMeta({
 //   layout: 'custom',
 // })
+const { VITE_USER } = import.meta.env
+const { data } = await useFetch(`https://raw.githubusercontent.com/${VITE_USER}/${VITE_USER}/main/.github/readme.md`)
 </script>
 
 <template>
   <section>
-    <p>This page will be displayed at the /about route.</p>
+    <markdown :value="data" />
   </section>
 </template>

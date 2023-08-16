@@ -1,5 +1,5 @@
 <template>
   <section>
-    <p>a footer</p>
+    <p>CC BY-NC-SA 4.0 2023-PRESENT © Rock Chen</p>
   </section>
 </template>

@@ -1,5 +1,10 @@
 <template>
   <section>
-    <p>a header</p>
+    <NuxtLink to="/">
+      Home
+    </NuxtLink>
+    <NuxtLink to="/about">
+      About
+    </NuxtLink>
   </section>
 </template>
