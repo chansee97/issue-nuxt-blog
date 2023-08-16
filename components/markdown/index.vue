@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import MarkdownIt from 'markdown-it'
+import { md } from './markdown'
 
 const props = defineProps<{
   value?: string
 }>()
-const md = new MarkdownIt()
-const result = md.render(props.value)
+
+const result = md.render(props.value || '')
 </script>
 
 <template>
