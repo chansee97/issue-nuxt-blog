@@ -4,7 +4,6 @@ const { data } = useFetch('https://api.github.com/repos/chansee97/my-blogs/issue
 
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
     <header>
       <h1>文章</h1>
       <nav>

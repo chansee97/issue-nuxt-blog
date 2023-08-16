@@ -9,5 +9,5 @@ const result = md.render(props.value || '')
 </script>
 
 <template>
-  <div v-html="result" />
+  <div class="prose" v-html="result" />
 </template>
