@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     strict: true,
   },
   modules: [
+    '@unocss/nuxt',
   ],
   app: {
     head: {
@@ -22,4 +23,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: [
+    '@unocss/reset/tailwind.css',
+  ],
 })

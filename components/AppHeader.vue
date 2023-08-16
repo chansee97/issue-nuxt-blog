@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="flex gap-1em justify-center">
     <NuxtLink to="/">
       Home
     </NuxtLink>

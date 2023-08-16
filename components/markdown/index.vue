@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { md } from './markdown'
+import { md } from './markdown-it'
 
 const props = defineProps<{
   value?: string
