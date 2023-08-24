@@ -1,5 +1,11 @@
 .prose {
 
+  /* common var */
+  --common-transition: all 0.3s ease;
+  --common-rd: 0.5em;
+  --common-bg: #69a79429;
+  --common-bd:#c9c7c2;
+
   max-width: 65em;
   margin: auto;
 
@@ -107,6 +113,11 @@
   }
 
   /* code */
+  pre,
+  code {
+    font-family: 'Source Code Pro', ui-monospace, monospace;
+  }
+
   .code-wrap {
     position: relative;
 

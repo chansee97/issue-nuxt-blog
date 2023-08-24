@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { md } from './markdown-it'
 
+// import './markdown.scss'
+
 const props = defineProps<{
   value?: string
 }>()
@@ -13,3 +15,7 @@ const result = computed(() => {
 <template>
   <div class="prose" v-html="result" />
 </template>
+
+<style lang="scss">
+@use './markdown.scss'
+</style>

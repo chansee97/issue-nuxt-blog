@@ -1,5 +1,1 @@
-import useFetchWithCache from './useFetchWithCache'
-
-export {
-  useFetchWithCache,
-}
+export * from './useFetchWithCache'

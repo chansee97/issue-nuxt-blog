@@ -1,9 +1,6 @@
-// ~/composables/useFetchWithCache.ts
-
 import { StorageSerializers } from '@vueuse/core'
 
-export default async <T>(url: string) => {
-  // Use sessionStorage to cache data
+export async function useFetchWithCache<T>(url: string) {
   const cached = useSessionStorage<T>(url, null, {
     serializer: StorageSerializers.object,
   })

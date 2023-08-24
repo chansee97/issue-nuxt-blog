@@ -54,5 +54,30 @@ function toogleTheme(event: MouseEvent) {
 </script>
 
 <template>
-  <div title="Toggle Color Scheme" class="dark:i-icon-park-outline-moon i-icon-park-outline-sun " @click="toogleTheme" />
+  <div title="Toggle Color Scheme" class="cursor-pointer dark:i-icon-park-outline-moon i-icon-park-outline-sun " @click="toogleTheme" />
 </template>
+
+<style>
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+
+/* 进入dark模式和退出dark模式时，两个图像的位置顺序正好相反 */
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 999;
+}
+
+::view-transition-old(root) {
+  z-index: 999;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+}
+</style>

@@ -17,7 +17,7 @@ const catelog = computed(() => {
       :class="!catelog ? 'font-bold' : 'op-30 hover:op-70'"
       @click="$router.push('/blog')"
     >
-      <span class=""> 全部</span>
+      <span class=""> ALL</span>
     </li>
     <li
       v-for="(item) in milestones" :key="item.id"
