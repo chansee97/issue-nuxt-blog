@@ -1,1 +1,3 @@
-{ "extends": "@chansee97/eslint-config-vue" }
+{
+  "extends": "@chansee97/eslint-config-vue"
+}

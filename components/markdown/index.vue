@@ -5,7 +5,9 @@ const props = defineProps<{
   value?: string
 }>()
 
-const result = md.render(props.value || '')
+const result = computed(() => {
+  return md.render(props.value || '暂无内容')
+})
 </script>
 
 <template>

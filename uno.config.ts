@@ -9,17 +9,6 @@ export default defineConfig({
     // 'bd': 'border-gray-500 border-1',
     // 'text-deep': 'c-black dark:c-white',
   },
-  theme: {
-    // colors: {
-    //   primary: 'var(--primary)',
-    //   container: 'var(--c-bg)',
-    // },
-    // extend: {
-    //   borderRadius: {
-    //     common: 'var(--common-rd)',
-    //   },
-    // },
-  },
   presets: [
     presetUno({
       dark: 'class',

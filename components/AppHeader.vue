@@ -1,10 +1,14 @@
 <template>
-  <section class="flex gap-1em justify-center">
-    <NuxtLink to="/">
-      Home
+  <header class="flex items-center justify-end gap-1.5em text-lg p-2em">
+    <NuxtLink to="/blog" class="transition-opacity op-70 hover:op-100">
+      Blog
     </NuxtLink>
-    <NuxtLink to="/about">
+    <NuxtLink to="/tags" class="transition-opacity op-70 hover:op-100">
+      Tags
+    </NuxtLink>
+    <NuxtLink to="/" class="transition-opacity op-70 hover:op-100">
       About
     </NuxtLink>
-  </section>
+    <dark-mode class="transition-opacity op-70 hover:op-100" />
+  </header>
 </template>
