@@ -19,7 +19,13 @@ export const getIssues = (query?: IssueQuery) => {
 
 /* 获取单篇issue */
 export const getIssue = (id: string) => {
-  return useFetchWithCache<Issue>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_BLOGS_REPO}/issues/${id}}`)
+  return useFetchWithCache<Issue>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_BLOGS_REPO}/issues/${id}`)
+}
+
+export const searchIssues = (q: string) => {
+  const path = addSearchParamsToURL('https://api.github.com/search/issues', { q })
+
+  return useFetchWithCache<Issue[]>(`${path}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}`)
 }
 
 /* 标签 */
