@@ -1,6 +1,6 @@
-import type { Issue, Label, Milestone } from './type'
+import type { Issue, IssueResult, Label, Milestone } from './type'
 import type { IssueQuery } from './query'
-import { addSearchParamsToURL } from '@/utils'
+import { addSearchParamsToURL, buildQueryString } from '@/utils'
 import { useFetchWithCache } from '@/composables'
 
 const { VITE_OWNER, VITE_BLOGS_REPO } = import.meta.env
@@ -22,10 +22,12 @@ export const getIssue = (id: string) => {
   return useFetchWithCache<Issue>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_BLOGS_REPO}/issues/${id}`)
 }
 
-export const searchIssues = (q: string) => {
-  const path = addSearchParamsToURL('https://api.github.com/search/issues', { q })
+export const searchIssues = (q: string, opt?: IssueQuery) => {
+  let query = `?q=${q}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}`
+  if (opt)
+    query += buildQueryString(opt)
 
-  return useFetchWithCache<Issue[]>(`${path}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}`)
+  return useFetchWithCache<IssueResult>(`https://api.github.com/search/issues${query}`)
 }
 
 /* 标签 */

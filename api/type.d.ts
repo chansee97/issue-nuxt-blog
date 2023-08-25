@@ -1,3 +1,8 @@
+export interface IssueResult {
+  incomplete_results: boolean
+  items: Issue[]
+  total_count: number
+}
 export interface Issue{
   url: string;
   repository_url: string;

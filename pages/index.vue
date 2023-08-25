@@ -6,7 +6,7 @@ const { data } = await getReadme()
 
 <template>
   <section>
-    <markdown :value="data" />
+    <markdown :issue="data" />
   </section>
 </template>
 

@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { getIssues, searchIssues } from '@/api'
+import { searchIssues } from '@/api'
 
 const route = useRoute()
 const catelog = route.params.catelog as string
 
-const { data: issues } = catelog ? await getIssues({ milestone: catelog }) : await getIssues()
+useHead({
+  title: catelog || null,
+})
+
+const { data } = catelog ? await searchIssues('', { milestone: catelog }) : await searchIssues('')
 
 const searchValue = ref('')
 
@@ -15,9 +19,7 @@ async function handleSearch() {
 
 <template>
   <div>
-    <nav>
-      <sub-nav />
-    </nav>
+    <sub-nav />
     <div class="flex gap-1em mb-1.5em">
       <input
         v-model="searchValue"
@@ -32,9 +34,13 @@ async function handleSearch() {
       </button>
     </div>
 
+    <div class="text-center">
+      共有{{ data.total_count }}篇文章
+    </div>
+
     <ul>
       <IssueCell
-        v-for="(issue, index) in issues" :key="issue.id"
+        v-for="(issue, index) in data.items" :key="issue.id"
         slide-enter :style="{ '--stagger': index + 1 }"
         :issue="issue"
       />

@@ -13,3 +13,12 @@ export function addSearchParamsToURL(url: string, params?: Record<string, any>) 
 
   return urlObject.toString()
 }
+
+export function buildQueryString(obj: any) {
+  let queryString = ''
+
+  for (const key in obj)
+    queryString += `+${key}:${obj[key]}`
+
+  return queryString
+}

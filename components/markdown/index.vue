@@ -1,28 +1,27 @@
 <script setup lang="ts">
 import type { Issue } from 'api/type'
-import { md } from './markdown-it'
+
 import DocTitle from './DocTitle.vue'
 import DocFooter from './DocFooter.vue'
+import DocRender from './DocRender.vue'
 
 const props = defineProps<{
-  issue?: Issue
+  issue: Issue | string
 }>()
 
-const mdContent = computed(() => {
-  return md.render(props.issue?.body || '暂无内容')
-})
+const isRaw = typeof props.issue === 'string'
 </script>
 
 <template>
   <div class="prose slide-enter-content">
     <!-- 文章页头 -->
-    <DocTitle :issue="props.issue" />
+    <DocTitle v-if="!isRaw" :issue="issue" />
 
     <!-- 文章正文 -->
-    <div v-html="mdContent" />
+    <DocRender :content="isRaw ? issue : issue?.body" />
 
     <!-- 文章底部 -->
-    <DocFooter :issue="props.issue" />
+    <DocFooter v-if="!isRaw" :issue="issue" />
   </div>
 </template>
 
