@@ -7,12 +7,12 @@ const { id } = route.params
 const { data } = await getIssue(id as string)
 
 useHead({
-  title: data.value.title,
+  title: data?.value.title,
 })
 </script>
 
 <template>
   <div>
-    <markdown :value="data?.body" />
+    <markdown :issue="data" />
   </div>
 </template>

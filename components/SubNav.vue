@@ -20,7 +20,7 @@ useHead({
 </script>
 
 <template>
-  <ul class="flex gap-1em mb-2em text-xl sm:text-3xl">
+  <ul class="flex gap-1em mb-1em text-xl sm:text-3xl">
     <li
       class="cursor-pointer transition-opacity"
       :class="!catelog ? 'font-bold' : 'op-30 hover:op-70'"

@@ -18,7 +18,7 @@ async function handleSearch() {
     <nav>
       <sub-nav />
     </nav>
-    <div class="flex gap-1em mb-1em">
+    <div class="flex gap-1em mb-1.5em">
       <input
         v-model="searchValue"
         placeholder="Search post"
