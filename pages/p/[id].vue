@@ -4,7 +4,11 @@ import { getIssue } from '@/api'
 const route = useRoute()
 const { id } = route.params
 
-const data = await getIssue(id as string)
+const { data } = await getIssue(id as string)
+
+useHead({
+  title: data.value.title,
+})
 </script>
 
 <template>

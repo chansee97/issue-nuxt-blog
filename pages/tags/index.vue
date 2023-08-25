@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { getTags } from '@/api'
 
+useHead({
+  title: 'Tags',
+})
+
 const { data: tags } = await getTags()
 </script>
 

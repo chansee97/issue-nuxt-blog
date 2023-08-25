@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-end gap-1.5em text-lg p-2em">
+  <header class="max-w-70ch m-auto flex items-center justify-end gap-1.5em text-lg p-2em">
     <NuxtLink to="/blog" class="transition-opacity op-70 hover:op-100">
       Blog
     </NuxtLink>
@@ -9,6 +9,9 @@
     <NuxtLink to="/" class="transition-opacity op-70 hover:op-100">
       About
     </NuxtLink>
+
+    <span class="ml-auto" />
+
     <dark-mode class="transition-opacity op-70 hover:op-100" />
   </header>
 </template>

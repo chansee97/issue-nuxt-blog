@@ -13,12 +13,8 @@ export async function useFetchWithCache<T>(url: string) {
         statusMessage: `Could not fetch data from ${url}`,
       })
     }
-
     // 更新缓存
     cached.value = data.value as T
-  }
-  else {
-    console.info(`Getting value from cache for ${url}`)
   }
 
   return {

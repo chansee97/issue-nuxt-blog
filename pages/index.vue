@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { getReadme } from '@/api'
 
 const { data } = await getReadme()

@@ -8,6 +8,15 @@ const route = useRoute()
 const catelog = computed(() => {
   return route.params.catelog ? Number(route.params.catelog) : null
 })
+
+const catelogName = computed(() => {
+  const result = milestones.value.find(item => item.number === catelog.value)
+  return result?.title
+})
+
+useHead({
+  title: catelogName.value,
+})
 </script>
 
 <template>
@@ -17,7 +26,7 @@ const catelog = computed(() => {
       :class="!catelog ? 'font-bold' : 'op-30 hover:op-70'"
       @click="$router.push('/blog')"
     >
-      <span class=""> ALL</span>
+      <span> ALL</span>
     </li>
     <li
       v-for="(item) in milestones" :key="item.id"
@@ -25,7 +34,7 @@ const catelog = computed(() => {
       :class="catelog === item.number ? ' font-bold' : 'op-30 hover:op-70'"
       @click="$router.push(`/blog/${item.number}`)"
     >
-      <span class=""> {{ item.title }}</span>
+      <span> {{ item.title }}</span>
     </li>
   </ul>
 </template>

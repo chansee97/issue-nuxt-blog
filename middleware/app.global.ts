@@ -1,9 +1,9 @@
 export default defineNuxtRouteMiddleware((to, _from) => {
   useHead({
-    title: to.path,
-    titleTemplate: (titleChunk) => {
-      const title = titleChunk?.replace(/^\/+/, '') || 'Blog'
-      return title
+    titleTemplate: (productCategory) => {
+      return productCategory
+        ? `${productCategory} - Rock Chen`
+        : 'Rock Chen'
     },
     meta: [
       {

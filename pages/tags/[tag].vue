@@ -4,6 +4,10 @@ import { getIssues } from '@/api'
 const route = useRoute()
 const tag = route.params.tag as string
 
+useHead({
+  title: `Tags | ${tag}`,
+})
+
 const { data: issues } = tag ? await getIssues({ labels: tag }) : await getIssues()
 </script>
 
