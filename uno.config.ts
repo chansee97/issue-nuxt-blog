@@ -2,7 +2,7 @@ import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts
 
 export default defineConfig({
   shortcuts: {
-    // 'flex-center': 'flex items-center justify-center',
+    'flex-center': 'flex items-center justify-center',
     // 'text-title': 'text-xl sm:text-3xl',
     // 'hover': 'op-70 hover:op-100 cursor-pointer transition-opacity',
     // 'deep-hover': 'op-20 hover:op-70 cursor-pointer transition-opacity',

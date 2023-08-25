@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getTags } from '@/api'
 
-const tags = await getTags()
+const { data: tags } = await getTags()
 </script>
 
 <template>

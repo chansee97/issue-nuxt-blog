@@ -1,7 +1,7 @@
 <script setup>
 import { getReadme } from '@/api'
 
-const data = await getReadme()
+const { data } = await getReadme()
 </script>
 
 <template>

@@ -8,7 +8,6 @@
 
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
-  background: var(--c-bg);
   border-radius: 10px;
 }
 
@@ -29,13 +28,11 @@ html,
 body,
 #nuxt-root {
   height: 100%;
-}
-
-html {
   line-height: 1.75;
-  color: var(--primary);
-  background-color: var(--c-bg);
   scroll-behavior: smooth;
 }
 
-
+html {
+  background: var(--c-bg);
+  color:var(--c-text);
+}

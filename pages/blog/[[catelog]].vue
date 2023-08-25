@@ -4,12 +4,12 @@ import { getIssues, searchIssues } from '@/api'
 const route = useRoute()
 const catelog = route.params.catelog as string
 
-let issues = catelog ? await getIssues({ milestone: catelog }) : await getIssues()
+const { data: issues } = catelog ? await getIssues({ milestone: catelog }) : await getIssues()
 
 const searchValue = ref('')
 
 async function handleSearch() {
-  issues = await searchIssues(searchValue.value)
+  await searchIssues(searchValue.value)
 }
 </script>
 
@@ -21,11 +21,11 @@ async function handleSearch() {
     <div class="flex gap-1em mb-1em">
       <input
         v-model="searchValue"
-        placeholder="Search post title / description / tag"
-        class="flex-1 px-1em py-.5em outline-none rounded-md ring ring-gray:100 focus:ring-gray-700"
+        placeholder="Search post"
+        class="flex-1 px-1em py-.2em outline-none rounded-md ring ring-gray:100 transition-colors focus:ring-gray-700"
       >
       <button
-        class="bg-gray-300 hover:bg-gray-200 rounded-md px-1em"
+        class="bg-gray-300 hover:bg-gray-200 transition-colors rounded-md px-1em"
         @click="handleSearch"
       >
         Search

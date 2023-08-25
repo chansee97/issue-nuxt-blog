@@ -4,7 +4,7 @@ import { getIssues } from '@/api'
 const route = useRoute()
 const tag = route.params.tag as string
 
-const issues = tag ? await getIssues({ labels: tag }) : await getIssues()
+const { data: issues } = tag ? await getIssues({ labels: tag }) : await getIssues()
 </script>
 
 <template>
@@ -17,6 +17,7 @@ const issues = tag ? await getIssues({ labels: tag }) : await getIssues()
         {{ tag }}
       </span>
     </h1>
+
     <ul>
       <IssueCell
         v-for="(issue, index) in issues" :key="issue.id"

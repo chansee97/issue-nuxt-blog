@@ -4,7 +4,6 @@ export async function useFetchWithCache<T>(url: string) {
   const cached = useSessionStorage<T>(url, null, {
     serializer: StorageSerializers.object,
   })
-
   if (!cached.value) {
     const { data, error } = await useFetch<T>(url)
 
@@ -22,5 +21,8 @@ export async function useFetchWithCache<T>(url: string) {
     console.info(`Getting value from cache for ${url}`)
   }
 
-  return cached
+  return {
+    data: cached,
+
+  }
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getMilestones } from '@/api'
 
-const milestones = await getMilestones()
+const { data: milestones } = await getMilestones()
 
 const route = useRoute()
 
