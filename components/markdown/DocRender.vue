@@ -3,9 +3,7 @@ import { md } from './markdown-it'
 
 const { content } = defineProps(['content'])
 
-const mdContent = computed(() => {
-  return md.render(content || '暂无内容')
-})
+const mdContent = md.render(content || '暂无内容')
 </script>
 
 <template>

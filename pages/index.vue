@@ -21,5 +21,6 @@ const readme = decodeURIComponent(escape(atob(data.value.content)))
 }
 .skill-wrapper > img{
   border-radius: 3px;
+  margin: 3px;
 }
 </style>
