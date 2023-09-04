@@ -3,7 +3,7 @@ import { getReadme } from '@/api'
 
 const { data } = await getReadme()
 
-const readme = decodeURIComponent(encodeURI(atob(data.value.content)))
+const readme = decodeURIComponent(escape(atob(data.value.content)))
 </script>
 
 <template>

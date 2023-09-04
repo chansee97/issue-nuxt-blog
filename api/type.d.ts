@@ -1,9 +1,28 @@
+export interface Readme {
+  name: string;
+  path: string;
+  sha: string;
+  size: number;
+  url: string;
+  html_url: string;
+  git_url: string;
+  download_url: string;
+  type: string;
+  content: string;
+  encoding: string;
+  _links: {
+    self: string;
+    git: string;
+    html: string;
+  };
+}
+
 export interface IssueResult {
   incomplete_results: boolean
-  items: Issue[]
+  items: any[]
   total_count: number
 }
-export interface Issue{
+export interface Issue {
   url: string;
   repository_url: string;
   labels_url: string;
@@ -36,16 +55,16 @@ export interface Issue{
 
 
 export interface Label {
-    id: number;
-    node_id: string;
-    url: string;
-    name: string;
-    color: string;
-    default?: boolean;
-    description?: string;
+  id: number;
+  node_id: string;
+  url: string;
+  name: string;
+  color: string;
+  default?: boolean;
+  description?: string;
 }
 
-interface Creator{
+interface Creator {
   login: string;
   id: number;
   node_id: string;
@@ -66,7 +85,7 @@ interface Creator{
   site_admin: boolean;
 }
 
-export interface Milestone{
+export interface Milestone {
   url: string;
   html_url: string;
   labels_url: string;
@@ -85,7 +104,7 @@ export interface Milestone{
   closed_at: string;
 }
 
-interface Reaction{
+interface Reaction {
   url: string;
   total_count: number;
   '+1': number;

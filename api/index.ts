@@ -1,4 +1,4 @@
-import type { Issue, IssueResult, Label, Milestone } from './type'
+import type { Issue, IssueResult, Label, Milestone, Readme } from './type'
 import type { IssueQuery } from './query'
 import { addSearchParamsToURL, buildQueryString } from '@/utils'
 import { useFetchWithCache } from '@/composables'
@@ -7,7 +7,7 @@ const { VITE_OWNER, VITE_BLOGS_REPO } = import.meta.env
 
 /* 获取README */
 export const getReadme = () => {
-  return useFetchWithCache<string>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_OWNER}/readme`)
+  return useFetchWithCache<Readme>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_OWNER}/readme`)
 }
 
 /* 获取issue */
@@ -22,8 +22,9 @@ export const getIssue = (id: string) => {
   return useFetchWithCache<Issue>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_BLOGS_REPO}/issues/${id}`)
 }
 
+/* 搜索issue */
 export const searchIssues = (q: string, opt?: IssueQuery) => {
-  let query = `?q=${q}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}`
+  let query = `?q=${q}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}+is:issue`
   if (opt)
     query += buildQueryString(opt)
 
