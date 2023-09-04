@@ -2,7 +2,7 @@
 
   /* common var */
   --common-transition: all 0.3s ease;
-  --common-rd: 0.5em;
+  --common-rd: 3px;
   --common-bg: #69a79429;
   --common-bd:#c9c7c2;
 
@@ -180,21 +180,11 @@
   }
 
   /* img */
-  figure {
-    width: fit-content;
-    margin: 4em auto 3em;
-
-    img {
-      max-width: 100%;
-      border-radius: var(--common-rd);
-    }
-
-    figcaption {
-      padding-top: 1em;
-      font-size: 0.9em;
-      text-align: center;
-      opacity: 0.7;
-    }
+  img {
+    margin: 2em auto;
+    max-width: 100%;
+    border-radius: var(--common-rd);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   /* Table */
