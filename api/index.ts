@@ -7,7 +7,7 @@ const { VITE_OWNER, VITE_BLOGS_REPO } = import.meta.env
 
 /* 获取README */
 export const getReadme = () => {
-  return useFetchWithCache<string>(`https://raw.githubusercontent.com/${VITE_OWNER}/${VITE_OWNER}/main/.github/readme.md`)
+  return useFetchWithCache<string>(`https://api.github.com/repos/${VITE_OWNER}/${VITE_OWNER}/readme`)
 }
 
 /* 获取issue */

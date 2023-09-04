@@ -2,11 +2,13 @@
 import { getReadme } from '@/api'
 
 const { data } = await getReadme()
+
+const readme = decodeURIComponent(encodeURI(atob(data.value.content)))
 </script>
 
 <template>
   <section>
-    <markdown :issue="data" />
+    <markdown :issue="readme" />
   </section>
 </template>
 
