@@ -5,7 +5,7 @@ function backTop() {
 </script>
 
 <template>
-  <div class="pr-2em xl:(absolute top-0 right-full h-full)">
+  <div class="pr-2em lg:(absolute top-0 right-full h-full)">
     <div class="sticky top-14 w-8em">
       <div class="cursor-pointer" @click="$router.back()">
         <div class="i-icon-park-outline-left-small-up" /> Back

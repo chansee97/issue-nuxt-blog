@@ -4,8 +4,8 @@ let isDark: boolean
 function toggleDark() {
   const root = document.documentElement
   isDark = root.classList.contains('dark')
-  root.classList.remove(isDark ? 'dark' : '-')
-  root.classList.add(isDark ? '-' : 'dark')
+  root.classList.remove(isDark ? 'dark' : 'light')
+  root.classList.add(isDark ? 'light' : 'dark')
 }
 function toggleViewTransition(event: MouseEvent) {
   const x = event.clientX
