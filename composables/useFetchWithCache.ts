@@ -1,6 +1,6 @@
 import { StorageSerializers } from '@vueuse/core'
 
-const { VITE_GITHUB_TOKEN } = import.meta.env
+// const { VITE_GITHUB_TOKEN } = import.meta.env
 
 export async function useFetchWithCache<T>(url: string) {
   const cached = useSessionStorage<T>(url, null, {
@@ -10,7 +10,7 @@ export async function useFetchWithCache<T>(url: string) {
     const { data, error } = await useFetch<T>(url, {
       onRequest({ options }) {
         options.headers = {
-          Authorization: `Bearer ${VITE_GITHUB_TOKEN}`,
+          // Authorization: `Bearer ${VITE_GITHUB_TOKEN}`,
         }
       },
     })
