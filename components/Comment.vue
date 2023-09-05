@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { id } = defineProps(['id'])
+
 const page = ref('')
 
 onMounted(() => {
@@ -8,7 +10,7 @@ onMounted(() => {
     origin: window.location.origin,
     pathname: window.location.pathname,
     repo: 'chansee97/my-blogs',
-    issueNumber: 15,
+    issueNumber: id,
     theme: isDark ? 'github-dark' : 'github-light',
     crossorigin: 'anonymous',
   }

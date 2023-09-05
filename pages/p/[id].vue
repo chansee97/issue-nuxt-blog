@@ -14,6 +14,6 @@ useHead({
 <template>
   <div>
     <markdown :issue="data" />
-    <Comment />
+    <Comment :id="data.number" />
   </div>
 </template>
