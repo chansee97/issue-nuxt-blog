@@ -24,7 +24,7 @@ export const getIssue = (id: string) => {
 
 /* 搜索issue */
 export const searchIssues = (q: string, opt?: IssueQuery) => {
-  let query = `?q=${q}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}+is:issue`
+  let query = `?q=${q}+repo:${VITE_OWNER}/${VITE_BLOGS_REPO}+is:issue+state:closed`
   if (opt)
     query += buildQueryString(opt)
 
