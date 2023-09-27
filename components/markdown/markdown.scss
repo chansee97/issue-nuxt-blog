@@ -28,9 +28,6 @@
   h3,
   h4 {
     &::before {
-      // position: absolute;
-      // margin-left: -1em;
-      // content: '#';
       opacity: 0;
       transition: var(--common-transition);
     }
@@ -115,7 +112,8 @@
   /* code */
   pre,
   code {
-    font-family: 'Source Code Pro', ui-monospace, monospace;
+    font-family: 'Fira Mono', ui-monospace, monospace;
+    font-size: 14px;
   }
 
   .code-wrap {
@@ -137,10 +135,8 @@
   }
 
   pre {
-    padding: 1.2em 1em;
     margin: 0.5em 0;
     overflow-x: auto;
-    background-color: var(--common-bg);
     border-radius: var(--common-rd);
 
     .line {

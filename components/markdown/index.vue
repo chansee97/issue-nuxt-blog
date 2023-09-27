@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Issue } from 'api/type'
+import type { Issue } from 'api/type.d.ts'
 
 import DocTitle from './DocTitle.vue'
 import DocFooter from './DocFooter.vue'

@@ -1,6 +1,8 @@
 import MarkdownIt from 'markdown-it'
-import Anchor from 'markdown-it-anchor'
-import Toc from 'markdown-it-toc-done-right'
+import PluginAnchor from 'markdown-it-anchor'
+import PluginToc from 'markdown-it-toc-done-right'
+import PluginHighlight from 'markdown-it-highlightjs'
+import 'highlight.js/styles/base16/atelier-estuary-light.css'
 
 interface TocType {
   html?: string
@@ -14,8 +16,8 @@ export const md = new MarkdownIt({
   typographer: true,
   // breaks: true,
   xhtmlOut: true,
-}).use(Anchor, { level: [1, 2, 3], permalink: true, permalinkBefore: true })
-  .use(Toc, {
+}).use(PluginAnchor, { level: [1, 2, 3], permalink: true, permalinkBefore: true })
+  .use(PluginToc, {
     listType: 'ul',
     callback(html, ast) {
       toc.value = {
@@ -24,6 +26,7 @@ export const md = new MarkdownIt({
       }
     },
   })
+  .use(PluginHighlight)
 
 md.renderer.rules.image = (tokens, idx) => {
   const token = tokens[idx]

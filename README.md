@@ -8,7 +8,7 @@
 - 适应移动的端布局
 - 页面加载，暗模式过渡动画简单优雅
 - 使用Github issue作为数据源，文章操作更加简单
-- 使用issue Label来为文章标记标签
+- 使用issue Label来为文章标记标签, Milestone作为文章分类
 - 文章搜索功能
 - 只需配置简单的环境变量即可使用，无需更改代码
 - 基于[utteranc](https://utteranc.es/)的评论功能，评论与issue绑定

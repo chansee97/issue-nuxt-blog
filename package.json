@@ -13,8 +13,10 @@
     "@iconify-json/simple-icons": "^1.1.66",
     "@unocss/reset": "^0.55.1",
     "date-fns": "^2.30.0",
+    "highlight.js": "^11.8.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.7",
+    "markdown-it-highlightjs": "^4.0.1",
     "markdown-it-toc-done-right": "^4.2.0"
   },
   "devDependencies": {
