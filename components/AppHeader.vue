@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { VITE_OWNER, VITE_BLOGS_REPO } = import.meta.env
-const repoIssuesPath = `https://github.com/${VITE_OWNER}/${VITE_BLOGS_REPO}/issues`
+const { VITE_OWNER } = import.meta.env
+const repoIssuesPath = `https://github.com/${VITE_OWNER}`
 </script>
 
 <template>

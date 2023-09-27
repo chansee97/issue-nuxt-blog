@@ -29,6 +29,6 @@ export default defineNuxtConfig({
     '@/assets/styles/global.css',
     '@/assets/styles/var.css',
     '@/assets/styles/transition.css',
-    // '@/assets/styles/markdown.scss',
+    '@/assets/styles/markdown.scss',
   ],
 })

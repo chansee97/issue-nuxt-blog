@@ -32,7 +32,3 @@ const isRaw = typeof props.issue === 'string'
     <DocFooter v-if="!isRaw" :issue="issue" />
   </div>
 </template>
-
-<style lang="scss">
-@use './markdown.scss'
-</style>

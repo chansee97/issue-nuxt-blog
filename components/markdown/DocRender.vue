@@ -9,3 +9,7 @@ const mdContent = md.render(content || '暂无内容')
 <template>
   <div v-html="mdContent" />
 </template>
+
+<style>
+
+</style>
