@@ -12,13 +12,13 @@ const catelog = computed(() => {
 
 <template>
   <nav>
-    <ul class="flex gap-1em mb-1em text-xl sm:text-3xl">
+    <ul class="flex gap-1em mb-1em text-2xl sm:text-4xl">
       <li
         class="cursor-pointer transition-opacity"
         :class="!catelog ? 'font-bold' : 'op-30 hover:op-70'"
         @click="$router.push('/blog')"
       >
-        <span> ALL</span>
+        <span> All</span>
       </li>
       <li
         v-for="(item) in milestones" :key="item.id"

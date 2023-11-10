@@ -7,7 +7,7 @@ const route = useRoute()
 const catelog = route.params.catelog as string
 
 useHead({
-  title: catelog || null,
+  title: catelog || 'All',
 })
 
 const searchResult = ref<IssueResult>()
@@ -29,7 +29,7 @@ handleSearch('')
     <div class="flex items-center m-y-2em">
       <div class="flex-auto border-b-2 border-dashed border-current op-30" />
       <div class="m-x-1em">
-        累计 <b> {{ searchResult?.total_count || '?' }} </b> 篇文章
+        A total of <b> {{ searchResult?.total_count || '?' }} </b> articles
       </div>
       <div class="flex-auto border-b-2 border-dashed border-current op-30" />
     </div>

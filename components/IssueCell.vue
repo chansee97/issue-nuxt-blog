@@ -8,7 +8,7 @@ const { issue } = defineProps(['issue'])
   <li>
     <NuxtLink
       :to="`/p/${issue.number}`"
-      class="w-fit mb-6 flex flex-col transition-opacity hover:op-70 md:(gap-2 flex-row items-center)"
+      class="w-fit mb-6 flex flex-col transition-opacity op-70 hover:op-100 md:(gap-2 flex-row items-center)"
     >
       <span class="text-lg">
         {{ issue.title }}

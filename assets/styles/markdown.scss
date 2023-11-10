@@ -2,7 +2,7 @@
 
   /* common var */
   --common-transition: all 0.3s ease;
-  --common-rd: 3px;
+  --common-rd: 6px;
   --common-bg: #69a79429;
   --common-bd:#c9c7c2;
 
@@ -84,10 +84,6 @@
 
   ul {
     list-style: disc;
-
-    li::marker {
-      color: #d1d5db;
-    }
   }
 
   ol {
@@ -105,7 +101,7 @@
 
   /* p */
   p {
-    margin: 1.2em 0;
+    margin-block: 0.8em;
     word-break: break-word;
   }
 
@@ -125,24 +121,6 @@
   pre,
   code {
     font-family: 'Fira Mono', ui-monospace, monospace;
-  }
-
-  .code-wrap {
-    position: relative;
-
-    .code-tools {
-      position: absolute;
-      top: 1.2em;
-      right: 1em;
-      opacity: 0;
-      transition: var(--common-transition);
-      transform: scale(0.8);
-    }
-
-    &:hover .code-tools {
-      opacity: 0.8;
-      transform: scale(1);
-    }
   }
 
   pre {
@@ -196,6 +174,9 @@
   /* Table */
   table {
     width: 100%;
+    margin-block: 1em;
+    border-radius: var(--common-rd);
+    overflow: hidden;
 
     th {
       text-align: center;

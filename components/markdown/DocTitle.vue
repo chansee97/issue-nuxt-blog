@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formattedDate } from '@/utils'
+import { formattedDate, getReadTime } from '@/utils'
 
 const { issue } = defineProps(['issue'])
 </script>
@@ -10,10 +10,12 @@ const { issue } = defineProps(['issue'])
 
     <div class="op-70 mb-4em">
       <!-- Time -->
-      <div>
-        {{ formattedDate(issue.created_at) }}
-        <a :href="issue.html_url" target="_blank">Issue </a>
-        <div class="i-icon-park-outline-arrow-right-up" />
+      <div class="flex justify-between">
+        <span class="flex items-center">
+          <div class="i-icon-park-outline-calendar m-r-2" /> {{ formattedDate(issue.created_at) }}
+          <div class="i-icon-park-outline-timer m-l-4 m-r-2" /> {{ getReadTime(issue.body) }} mins read
+        </span>
+        <a :href="issue.html_url" target="_blank">See this issue <div class="i-icon-park-outline-arrow-right-up" /></a>
       </div>
 
       <!-- Tags -->

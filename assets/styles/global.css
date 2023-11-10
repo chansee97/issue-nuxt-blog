@@ -20,10 +20,6 @@
   background: var(--c-scrollbar-hover);
 }
 
-::selection {
-  background: #8884;
-}
-
 html,
 body,
 #nuxt-root {

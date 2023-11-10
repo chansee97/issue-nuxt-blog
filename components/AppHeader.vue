@@ -4,7 +4,7 @@ const repoIssuesPath = `https://github.com/${VITE_OWNER}`
 </script>
 
 <template>
-  <header class="max-w-70ch m-auto flex items-center justify-end gap-1.5em text-lg p-2em">
+  <header class="max-w-73ch m-auto flex items-center justify-end gap-5% text-lg p-2em p-x-12">
     <NuxtLink to="/blog/Blog" title="Blog" class="transition-opacity op-70 hover:op-100">
       Blog
     </NuxtLink>
