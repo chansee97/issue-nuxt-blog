@@ -1,1 +1,1 @@
-export * from './useFetchWithCache'
+export * from './useGithubFetch'
