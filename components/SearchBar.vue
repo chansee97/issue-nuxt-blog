@@ -14,13 +14,15 @@ function handleSearch() {
   <div class="flex gap-1em">
     <input
       v-model="q"
-      placeholder="Search post"
       class="r-input"
+      placeholder="Search post title"
+      @keyup.enter="handleSearch"
     >
     <button
       class="r-button"
       @click="handleSearch"
     >
+      <div class="i-icon-park-outline-search" />
       Search
     </button>
   </div>

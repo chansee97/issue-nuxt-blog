@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getIssues, getTags } from '@/api'
+import { getIssues, getTags, searchIssues } from '@/api'
 
 useHead({
   title: 'Tags',
@@ -14,13 +14,20 @@ async function fetchIssues(tag: string) {
   const { data } = await getIssues({ labels: tag })
   issues.value = data.value
 }
+
+async function handleSearch(q: string) {
+  const { data } = await searchIssues(q)
+  issues.value = data.value?.items
+}
 </script>
 
 <template>
   <h1 class="text-xl sm:text-3xl mb-2em font-bold">
     Tags
   </h1>
-  <ul class="flex gap-1em flex-wrap">
+  <SearchBar @search="handleSearch" />
+
+  <ul class="flex gap-1em flex-wrap mt-2em">
     <li
       v-for="(tag, index) in tags" :key="tag.id"
       slide-enter

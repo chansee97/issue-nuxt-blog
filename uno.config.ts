@@ -3,8 +3,8 @@ import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts
 export default defineConfig({
   shortcuts: {
     'flex-center': 'flex items-center justify-center',
-    'r-button': 'bg-transparent transition-colors rounded-md px-1em ring ring-current text-gray:60 hover:(text-gray)',
-    'r-input': 'flex-1 px-1em py-.2em outline-none rounded-md bg-transparent transition-colors ring ring-current text-gray:60 focus:text-gray',
+    'r-button': 'bg-transparent transition-colors rounded-md px-1em ring ring-current text-gray-800 dark:text-gray-200 hover:(text-gray)',
+    'r-input': 'flex-1 px-1em py-.2em outline-none rounded-md bg-transparent transition-colors ring ring-current text-gray-800 dark:text-gray-200 focus:text-gray',
   },
   presets: [
     presetUno({
@@ -20,7 +20,6 @@ export default defineConfig({
     }),
     presetAttributify (),
     presetIcons({
-      scale: 1.2,
       extraProperties: {
         'display': 'inline-block',
         'vertical-align': 'middle',

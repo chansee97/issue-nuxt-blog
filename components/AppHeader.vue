@@ -17,18 +17,13 @@ const repoIssuesPath = `https://github.com/${VITE_OWNER}`
 
     <span class="ml-auto" />
 
-    <!-- <a
-      :href="repoIssuesPath" target="_blank" title="RSS"
-      class="i-icon-park-outline-rss transition-opacity op-70 hover:op-100"
-    /> -->
-
-    <!-- <a
-      href="https://chen-note.notion.site/014406b1ab15451b89a3b558775c500a?v=7e71028297cc4375b7076f1db8a792ef&pvs=4" target="_blank" title="Booklist"
-      class="i-icon-park-outline-list-view transition-opacity op-70 hover:op-100"
-    /> -->
+    <a
+      href="/rss" target="_blank" title="RSS"
+      class="transition-opacity op-70 hover:op-100 i-icon-park-outline-rss"
+    />
     <a
       :href="repoIssuesPath" target="_blank" title="GitHub Issues"
-      class="i-icon-park-outline-github transition-opacity op-70 hover:op-100"
+      class="transition-opacity op-70 hover:op-100 i-icon-park-outline-github-one"
     />
     <dark-mode class="transition-opacity op-70 hover:op-100" />
   </header>

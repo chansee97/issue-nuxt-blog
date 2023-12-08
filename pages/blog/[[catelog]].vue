@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SearchBar from './components/SearchBar.vue'
 import { searchIssues } from '@/api'
 import type { IssueResult } from '@/api/type'
 
@@ -23,15 +22,12 @@ handleSearch('')
 <template>
   <div>
     <sub-nav />
-
-    <SearchBar @search="handleSearch" />
-
     <div class="flex items-center m-y-2em">
-      <div class="flex-auto border-b-2 border-dashed border-current op-30" />
+      <div class="flex-auto border-b-1 border-dashed border-current op-30" />
       <div class="m-x-1em">
         A total of <b> {{ searchResult?.total_count || '?' }} </b> articles
       </div>
-      <div class="flex-auto border-b-2 border-dashed border-current op-30" />
+      <div class="flex-auto border-b-1 border-dashed border-current op-30" />
     </div>
 
     <ul>
