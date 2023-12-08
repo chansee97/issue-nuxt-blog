@@ -1,1 +1,1 @@
-export default defineEventHandler(() => 'Hello World!')
+export default defineEventHandler(() => 'Hello RSS!')
