@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { id } = defineProps(['id'])
-
+const { VITE_OWNER, VITE_BLOGS_REPO } = import.meta.env
 const page = ref('')
 
 onMounted(() => {
@@ -9,7 +9,7 @@ onMounted(() => {
     url: window.location.href,
     origin: window.location.origin,
     pathname: window.location.pathname,
-    repo: 'chansee97/my-blogs',
+    repo: `${VITE_OWNER}/${VITE_BLOGS_REPO}`,
     issueNumber: id,
     theme: isDark ? 'github-dark' : 'github-light',
     crossorigin: 'anonymous',

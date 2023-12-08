@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { searchIssues } from '@/api'
-import type { IssueResult } from '@/api/type'
 
 const route = useRoute()
 const catelog = route.params.catelog as string
@@ -9,11 +8,13 @@ useHead({
   title: catelog || 'All',
 })
 
-const searchResult = ref<IssueResult>()
+const searchResult = ref()
+const issueList = ref()
 
 async function handleSearch(q: string) {
   const { data } = catelog ? await searchIssues(q, { milestone: catelog }) : await searchIssues(q)
   searchResult.value = data.value
+  issueList.value = insertYearToPosts(data.value?.items)
 }
 
 handleSearch('')
@@ -31,11 +32,21 @@ handleSearch('')
     </div>
 
     <ul>
-      <IssueCell
-        v-for="(issue, index) in searchResult?.items" :key="issue.id"
-        slide-enter :style="{ '--stagger': index + 1 }"
-        :issue="issue"
-      />
+      <template v-for="(issue, index) in issueList" :key="issue.id">
+        <div
+          v-if="issue.isMarked" class="relative pointer-events-none select-none h-20"
+          slide-enter :style="{ '--stagger': index + 1 }"
+        >
+          <span
+            class="text-8em font-bold font-mono op-15 absolute -top-0.2em -left-0.3em color-transparent text-stroke-2 text-stroke-hex-aaa"
+          >{{ issue.year }}</span>
+        </div>
+        <IssueCell
+          v-else
+          slide-enter :style="{ '--stagger': index + 1 }"
+          :issue="issue"
+        />
+      </template>
     </ul>
   </div>
 </template>

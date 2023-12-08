@@ -8,14 +8,16 @@ const repoIssuesPath = `https://github.com/${VITE_OWNER}`
     <NuxtLink to="/blog/Blog" title="Blog" class="transition-opacity op-70 hover:op-100">
       Blog
     </NuxtLink>
-    <NuxtLink to="/tags" title="Tags" class="transition-opacity op-70 hover:op-100">
-      Tags
-    </NuxtLink>
+
     <NuxtLink to="/" title="About" class="transition-opacity op-70 hover:op-100">
       About
     </NuxtLink>
 
     <span class="ml-auto" />
+
+    <NuxtLink to="/search" title="Search" class="transition-opacity op-70 hover:op-100">
+      <div class="i-icon-park-outline-search" />
+    </NuxtLink>
 
     <a
       href="/rss" target="_blank" title="RSS"

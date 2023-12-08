@@ -23,7 +23,7 @@ async function handleSearch(q: string) {
 
 <template>
   <h1 class="text-xl sm:text-3xl mb-2em font-bold">
-    Tags
+    Search
   </h1>
   <SearchBar @search="handleSearch" />
 
