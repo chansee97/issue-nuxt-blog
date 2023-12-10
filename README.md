@@ -26,7 +26,7 @@ Issue-nuxt-blog是基于Github issue实现的博客项目, 新增和编辑文章
 ### 使用前准备
 1. 准备一个新仓库，仓库名称随意，例如“my-blogs”，记下仓库的名字
 2. 记下自己的github用户名，例如“chansee97”
-3. 创建一个专门用来读取issue的[github token]并保存(https://github.com/settings/tokens/new),配置如下
+3. 创建一个专门用来读取issue的[github token](https://github.com/settings/tokens/new)并保存,配置如下
 ![image.png](https://s2.loli.net/2023/12/08/v91ueNF7HItShA4.png)
 4. 准备一个[vecel](https://vercel.com/)账号（此处以vecel部署为例）
 
