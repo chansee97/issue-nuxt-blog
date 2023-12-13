@@ -6,6 +6,13 @@
 
 ![Cover.png](https://s2.loli.net/2023/12/08/OINcU36A9tCyFYW.png)
 </div>
+
+<div align='center'>
+
+  <b>简体中文</b> | [English](https://github.com/chansee97/issue-nuxt-blog/blob/main/README_en.md)
+</div>
+
+
 Issue-nuxt-blog是基于Github issue实现的博客项目, 新增和编辑文章更加快速方便，而且部署简单，无需服务器，只需配置环境变量即可使用。
 
 本项目基于另一个使用本地文件记录的[nuxt博客](https://github.com/chansee97/nuxt-blog)，使用并不方便，所以有了使用issue的版本
@@ -56,8 +63,6 @@ issue的Milestone 为文章分类，你可以为一个文章设置一个分类
 博客中的个人介绍与issue所有者的reamde简介文件一致，请仔细编辑自己名下简介文件
 github上个人简介的仓库是https://github.com/用户名/用户名
 简介则是此仓库下的`reamde.md`文件
-### 环境变量
-
 
 ## 🔎 本地开发
 确保安装依赖项：
