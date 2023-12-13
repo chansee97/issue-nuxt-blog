@@ -19,10 +19,10 @@ const repoIssuesPath = `https://github.com/${VITE_OWNER}`
       <div class="i-icon-park-outline-search" />
     </NuxtLink>
 
-    <a
+    <!-- <a
       href="/rss" target="_blank" title="RSS"
       class="transition-opacity op-70 hover:op-100 i-icon-park-outline-rss"
-    />
+    /> -->
     <a
       :href="repoIssuesPath" target="_blank" title="GitHub Issues"
       class="transition-opacity op-70 hover:op-100 i-icon-park-outline-github-one"
