@@ -13,7 +13,7 @@
 
 Issue-nuxt-blog is a blog project based on the GitHub issue. It is faster and more convenient to add and edit articles, and it is easy to deploy. It does not require a server, and can be used by configuring environment variables.
 
-This project is based on another [nuxt blog] (https://github.com/chansee97/nuxt-blog) that uses local file records, which is not convenient to use, so there is a version that uses issue
+This project is based on another [nuxt blog](https://github.com/chansee97/nuxt-blog) that uses local file records, which is not convenient to use, so there is a version that uses issue
 
 ##💡 Features
 - Nuxt3 technology stack, ssr rendering, more SEO-friendly
@@ -23,7 +23,8 @@ This project is based on another [nuxt blog] (https://github.com/chansee97/nuxt-
 - Use issue Label to tag articles, Milestone for article classification
 - Article search function
 - Simply configure simple environment variables to use without changing the code
-- Comment function based on [utteranc] (https://utteranc.es/), comment and issue binding
+- Comment function based on [utteranc](https://utteranc.es/), comment and issue binding
+- Generate RSS feeds using [rsshub](https://docs.rsshub.app/)
 
 
 ## How to use 📖

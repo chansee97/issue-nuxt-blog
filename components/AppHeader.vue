@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { VITE_OWNER } = import.meta.env
+const { VITE_OWNER, VITE_BLOGS_REPO } = import.meta.env
 const repoIssuesPath = `https://github.com/${VITE_OWNER}`
 </script>
 
@@ -19,10 +19,10 @@ const repoIssuesPath = `https://github.com/${VITE_OWNER}`
       <div class="i-icon-park-outline-search" />
     </NuxtLink>
 
-    <!-- <a
-      href="/rss" target="_blank" title="RSS"
+    <a
+      :href="`https://rsshub.app/github/issue/${VITE_OWNER}/${VITE_BLOGS_REPO}`" target="_blank" title="RSS"
       class="transition-opacity op-70 hover:op-100 i-icon-park-outline-rss"
-    /> -->
+    />
     <a
       :href="repoIssuesPath" target="_blank" title="GitHub Issues"
       class="transition-opacity op-70 hover:op-100 i-icon-park-outline-github-one"
