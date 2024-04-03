@@ -19,8 +19,17 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: '//sdk.51.la/js-sdk-pro.min.js?id=3F57lu6zMWXHeBL1&ck=3F57lu6zMWXHeBL1',
-          id: 'LA_COLLECT',
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-MEC21CTMC9',
+          async: '',
+        },
+        {
+          innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-MEC21CTMC9');
+          `,
         },
       ],
       noscript: [{ children: 'JavaScript is required' }],
@@ -36,4 +45,7 @@ export default defineNuxtConfig({
     '@/assets/styles/transition.css',
     '@/assets/styles/markdown.scss',
   ],
+  devServer: {
+    port: 4000,
+  },
 })
